@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Test</title>
+</head>
+<body>
+<div th:text="|Welcome to our application, ${user}!|"></div>
+<div th:text="'Welcome to our application, ' + ${user} + '!'"></div>
+
+<div th:insert="th-footer :: copy"></div>
+
+<div th:replace="th-footer :: copy"></div>
+
+<div th:include="th-footer :: copy2"></div>
+
+</body>
+</html>

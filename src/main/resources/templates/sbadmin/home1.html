@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns: th="http://www.thymeleaf.org">
+<!-- thymeleaf =  -->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+template/index.html
+
+    <!--
+    <li th:each="name : ${list}">
+        [[${name}]]    induk,comso,sunkoo (MemberController의 모델이 담겨옴(ArraryList에 있는것)
+                     속성접근
+    </li>
+    -->
+    <table th:each= "str : ${list}" b>
+        <tr>
+            
+
+            <td th:text="${str} + '입니다'"></td>
+
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+
+<h1> Registration in memoDTO</h1>
+<!-- th:object : 등록 객체를 의미
+        post메소드 방법은 input type에 name할 필요없음 -->
+<form action="#" th:action="@{'/memoDTOS/' + ${memoDTO.mno}}" th:object="${memoDTO}" th:method="put">
+    Mno : <input type="text" name="mno" th:field="*{mno}" th:value="*{mno}" readonly/><br>
+    MemoText : <input type="text" name="memoText" th:field="*{memoText}" th:value="*{memoText}"/><br>
+    <input type="submit" value="Update"/><input type="reset" value="Reset"/>
+</form>
+
+</body>
+</html>
